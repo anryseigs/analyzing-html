@@ -7,13 +7,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import oxford.dictionaries.analyzinghtml.commond.AbstractController;
+import oxford.dictionaries.analyzinghtml.common.AbstractController;
+import oxford.dictionaries.analyzinghtml.common.UrlPaths;
 import oxford.dictionaries.analyzinghtml.request01.dto.request.CountAllRequestRequestDto;
 import oxford.dictionaries.analyzinghtml.request01.dto.response.CountAllResponseDto;
-import oxford.dictionaries.analyzinghtml.commond.UrlPaths;
 
 import java.text.BreakIterator;
-import java.util.Arrays;
 import java.util.Locale;
 import java.util.Objects;
 

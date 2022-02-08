@@ -1,4 +1,4 @@
-package oxford.dictionaries.analyzinghtml.request02.dto.response;
+package oxford.dictionaries.analyzinghtml.request00.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AccessLevel;
@@ -12,18 +12,19 @@ import java.util.Objects;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class MdToHtmlRequestResponseDto extends AbstractResponseDto {
+public class TranslateResponseDto extends AbstractResponseDto {
   private static final long serialVersionUID = -6380835397334590036L;
 
-  @JsonProperty("html_string")
-  String htmlString;
+  @JsonProperty("translate")
+  String translate;
 
-  public MdToHtmlRequestResponseDto(String htmlString, String failMsg) {
-    if (Objects.isNull(failMsg)) {
-      this.htmlString = htmlString;
+  public TranslateResponseDto(String translate, String msgFail) {
+    if (Objects.isNull(msgFail)) {
+      this.translate = translate;
     } else {
-      this.htmlString = null;
-      this.msg = failMsg;
+      this.translate = null;
+      this.msg = msgFail;
     }
   }
+
 }

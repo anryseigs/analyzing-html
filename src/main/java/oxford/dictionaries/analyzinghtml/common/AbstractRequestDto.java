@@ -1,4 +1,4 @@
-package oxford.dictionaries.analyzinghtml.commond;
+package oxford.dictionaries.analyzinghtml.common;
 
 import java.io.Serializable;
 

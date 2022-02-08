@@ -6,12 +6,24 @@
   - Spring 2.6.3
 
 ## Miêu tả yêu cầu
-- Sử dụng API: https://developer.oxforddictionaries.com/documentation
+- <b>Request 00</b>:
+  - Api translate sử dụng API: https://developer.oxforddictionaries.com/documentation
   - acc: `truongnv0590`
   - pass: `Abcd1234.`
   - app_id: `76e4f61d`
-  - app_key: `8d179a4f58ddf109d5c386c5898211d3`
-
+  - app_key: `8d179a4f58ddf109d5c386c5898211d3` 
+  - cURL sample:
+  ```
+  curl --request POST \
+    --url http://127.0.0.1:8080/api/v1/translate \
+    --header 'Content-Type: application/json' \
+    --data '{
+    "language": "en-us",
+    "word": "test",
+    "fields": "pronunciations",
+    "strictMatch": "false"
+  }'
+  ```
 - <b>Request 01</b>:
   - Từ một đoạn HTML với encoding UTF8, phân tích:
       - Đếm số ký tự

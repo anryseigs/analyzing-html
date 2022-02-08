@@ -5,7 +5,7 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.FieldDefaults;
-import oxford.dictionaries.analyzinghtml.commond.AbstractResponseDto;
+import oxford.dictionaries.analyzinghtml.common.AbstractResponseDto;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
