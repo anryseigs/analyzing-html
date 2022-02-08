@@ -36,7 +36,16 @@
     - Phân tích API của `oxforddictionaries`
     - tìm thư viện clear tag HTML
     - impl API count 
-    - testing
+  
+  - cURL sample: 
+  ```
+  curl --request POST \
+    --url http://127.0.0.1:8080/api/v1/count-all \
+    --header 'Content-Type: application/json' \
+    --data '{
+    "html_string": "<h1 class=\"title-detail\">Tổng giám đốc Starbucks Việt Nam: '\''Ly nước 90.000 đồng thành thức uống hàng ngày'\''</h1><p class=\"description\">Tổng giám đốc Starbucks Việt Nam xác nhận kết quả tài chính năm 2021 không bằng trước dịch nhưng ly nước 90.000 đồng của họ đã thành \"cà phê hàng ngày\".</p><p class=\"Normal\">\"Nói về những con số thì kết quả kinh doanh năm qua không thể bằng 2020 và rất xa so với những năm bình thường\", bà Patricia Marques, Tổng giám đốc Starbucks Việt Nam chia sẻ mới đây.</p><p class=\"Normal\">Không nói con số cụ thể nhưng bà Patricia cho rằng, đây là điều dễ hiểu vì năm 2020 giãn cách chỉ khoảng hai tuần, còn năm qua tổng thời gian giãn cách kéo dài chín tuần, trong đó có giai đoạn hoàn toàn không kinh doanh gì ở nhiều cửa hàng.</p><p class=\"Normal\">Dù thừa nhận kết quả tài chính thấp, Starbucks vẫn \"ăn nên làm ra\" ở một số mặt khác. Đó là chuỗi đã xây dựng được tập khách hàng thường xuyên, chấp nhận một ly nước giá 90.000-100.000 đồng. \"Starbucks đến thời điểm này có thể nói đã trở thành cà phê hàng ngày của khách hàng rồi\", bà Patricia tự tin.</p>"
+  }'
+  ```
 
 - <b>Request 02</b>:
   - Chuyển đổi định dạng text markdown sang HTML:
@@ -44,4 +53,12 @@
     - in đậm
     - in nghiêng
     - gạch chân
-
+  - cURL sample:
+  ```
+  curl --request POST \
+    --url http://127.0.0.1:8080/api/v1/md-to-html \
+    --header 'Content-Type: application/json' \
+    --data '{
+    "md_string": "# abc *a* **a**"
+  }'
+  ```
