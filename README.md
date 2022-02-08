@@ -28,7 +28,7 @@
     ```  
     => Kết quả cần ra đúng
     ```
-    Số ký tự: 959
+    Số ký tự: 959 (????? - Thực tế check bằng nhiều tool không ra kết quả này)
     Số từ: 198
     Số câu: 7
     ```
